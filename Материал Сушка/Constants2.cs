@@ -72,8 +72,8 @@ namespace MaterialDrying
         public decimal T_s_eq { get; set; }
         public decimal T_II_ref { get; set; }
         
-        public decimal S_te_nu_I => (Ro_e_I * C_p_e_I * (T_s_eq - T_s_3)) / (Ro_vi_II * delta_h_s * (W_p - W_eq));
-        public decimal S_te_nu_II => (C_p_e_II * (T_s_eq - T_II_ref)) / (delta_h_s * (W_p - W_eq));
+        public decimal S_te_nu_I => (Ro_e_I * C_p_e_I * (T_s_eq - T_s_3)) / (Ro_vi_II * delta_h_s * (W_p - W_eq)*(-1));
+        public decimal S_te_nu_II => (C_p_e_II * (T_s_eq - T_II_ref)) / (delta_h_s * (W_p - W_eq)*(-1));
         
         public decimal W_eq { get; set; }
         public decimal W_p { get; set; }
